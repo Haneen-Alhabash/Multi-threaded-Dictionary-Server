@@ -9,7 +9,7 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # Copy server code and database
-COPY server.py database.json /app/
+COPY "Multi-threaded Dictionary Server/server.py" "Multi-threaded Dictionary Server/database.json" /app/
 
 # Expose the server port
 EXPOSE 8888
