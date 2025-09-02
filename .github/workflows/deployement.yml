@@ -21,7 +21,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        working-directory: ${{ github.workspace }}/'Multi-threaded Dictionary Server'
         run: docker build  -t ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }} .
 
       - name: Push Docker image
